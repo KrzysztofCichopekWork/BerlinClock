@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using BerlinClock.Entities;
+﻿using BerlinClock.Entities;
 using BerlinClock.Interfaces;
 using BerlinClock.Resources;
 

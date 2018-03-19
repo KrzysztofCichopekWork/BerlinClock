@@ -1,5 +1,4 @@
-﻿using System;
-using BerlinClock.Entities;
+﻿using BerlinClock.Entities;
 using BerlinClock.Interfaces;
 using BerlinClock.Validators;
 using Moq;
@@ -32,7 +31,7 @@ namespace BerlinClockTests
         [TestCase("ValidTime")]
         public void IsValid_WhenValidTimeIsPass_ValidateProperly(string time)
         {
-            _timeParser.Setup(x => x.Parse(time)).Returns(new Time(12,12,12));
+            _timeParser.Setup(x => x.Parse(time)).Returns(new Time(12, 12, 12));
 
             Assert.True(_sut.IsValid(time));
         }

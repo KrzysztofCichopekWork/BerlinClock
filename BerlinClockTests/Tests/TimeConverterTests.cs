@@ -14,7 +14,6 @@ namespace BerlinClockTests
         private Mock<ITimeParser> _timeParser;
         private TimeConverter _sut;
 
-
         [SetUp]
         public void SeutUp()
         {
@@ -38,9 +37,6 @@ namespace BerlinClockTests
             _timeValidator.Setup(x => x.IsValid(It.IsAny<string>())).Returns(false);
 
             Assert.Throws<ArgumentException>(() => _sut.ConvertTime(time));
-
         }
-
-
     }
 }

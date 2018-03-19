@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using BerlinClock.Entities;
+﻿using BerlinClock.Entities;
 using BerlinClock.Interfaces;
 using BerlinClock.Resources;
 
@@ -15,7 +13,7 @@ namespace BerlinClock
         {
             _clock = clock;
         }
-        
+
         public string GetRepresentationOfClock(Time time)
         {
             _clock.ClockRepresentation = GetClockRepresentationToPass(ComputeClockRepresentation(time));

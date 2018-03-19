@@ -7,7 +7,6 @@ namespace BerlinClockTests
     {
         private FiveHoursClockDecorator _sut;
 
-
         [SetUp]
         public void SeutUp()
         {
@@ -29,6 +28,5 @@ namespace BerlinClockTests
         {
             return _sut.GetRepresentationOfClock(TimeUtilis.GetDateTimeWithSpecificHourValue(hours));
         }
-
     }
 }

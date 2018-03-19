@@ -1,5 +1,4 @@
-﻿using System;
-using BerlinClock;
+﻿using BerlinClock;
 using NUnit.Framework;
 
 namespace BerlinClockTests
@@ -24,7 +23,5 @@ namespace BerlinClockTests
 
             return _sut.GetRepresentationOfClock(time);
         }
-
-       
     }
 }

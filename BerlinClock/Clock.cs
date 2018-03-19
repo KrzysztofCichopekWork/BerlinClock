@@ -4,10 +4,10 @@ using BerlinClock.Interfaces;
 
 namespace BerlinClock
 {
-    public class Clock: IClock
+    public class Clock : IClock
     {
         private string _clockRepresentation;
-        
+
         public string ClockRepresentation
         {
             set { _clockRepresentation = value; }

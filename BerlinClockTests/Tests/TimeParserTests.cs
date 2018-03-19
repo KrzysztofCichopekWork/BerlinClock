@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using BerlinClock;
 using BerlinClock.Entities;
-using BerlinClock.Interfaces;
-using Moq;
 using NUnit.Framework;
 
 namespace BerlinClockTests
@@ -30,9 +27,9 @@ namespace BerlinClockTests
             {
                 get
                 {
-                    yield return new TestCaseData("12:45:13").Returns(new Time(12,45,13));
-                    yield return new TestCaseData("12:45").Returns(new Time(12,45,0));
-                    yield return new TestCaseData("12").Returns(new Time(12,0,0));
+                    yield return new TestCaseData("12:45:13").Returns(new Time(12, 45, 13));
+                    yield return new TestCaseData("12:45").Returns(new Time(12, 45, 0));
+                    yield return new TestCaseData("12").Returns(new Time(12, 0, 0));
                 }
             }
         }

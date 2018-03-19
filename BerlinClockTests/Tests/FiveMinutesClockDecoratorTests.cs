@@ -8,7 +8,6 @@ namespace BerlinClockTests
     {
         private FiveMinutesClockDecorator _sut;
 
-
         [SetUp]
         public void SeutUp()
         {

@@ -8,7 +8,7 @@ namespace BerlinClock.Entities
         public int Minutes { get; set; }
         public int Seconds { get; set; }
 
-        public Time(int hours, int minutes, int seconds = default(int) )
+        public Time(int hours, int minutes, int seconds = default(int))
         {
             Hours = hours;
             Minutes = minutes;
@@ -48,6 +48,18 @@ namespace BerlinClock.Entities
                 && Seconds == p.Seconds;
         }
 
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 11;
+                hash = hash * 103 + Hours.GetHashCode();
+                hash = hash * 103 + Minutes.GetHashCode();
+                hash = hash * 103 + Seconds.GetHashCode();
+                return hash;
+            }
+        }
+
         private static int ParseToIntOrDefault(string value)
         {
             try
@@ -59,8 +71,5 @@ namespace BerlinClock.Entities
                 return default(int);
             }
         }
-
-
-
     }
 }

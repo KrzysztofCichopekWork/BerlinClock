@@ -34,11 +34,16 @@ namespace BerlinClock
             for (var i = 0; i < LampCounter; i++)
             {
                 representation += i < onLampCounter
-                    ? IsThirdLamp(i) ? ClockLampRepresentationResources.RedLampRepresentation : ClockLampRepresentationResources.YellowLampRepresentation
+                    ? GetRightColorLight(i)
                     : ClockLampRepresentationResources.OffLampRepresentation;
             }
 
             return representation;
+        }
+
+        private static string GetRightColorLight(int lampCount)
+        {
+            return IsThirdLamp(lampCount) ? ClockLampRepresentationResources.RedLampRepresentation : ClockLampRepresentationResources.YellowLampRepresentation;
         }
 
         private static bool IsThirdLamp(int i)
